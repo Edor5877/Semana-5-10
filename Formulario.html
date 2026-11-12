@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro Completo</title>
+</head>
+<body>
+
+    <h2>Formulario de Registro</h2>
+    
+    <!-- Enviamos los datos a la URL pedida. Usamos POST por seguridad (lleva contraseña) -->
+    <form action="https://www.w3schools.com/action_page.php" method="post">
+    
+        <!-- 1. Datos Personales -->
+        <fieldset>
+            <legend>Datos Personales</legend>
+            
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido" required><br><br>
+
+            <label for="nacimiento">Fecha de Nacimiento:</label><br>
+            <input type="date" id="nacimiento" name="fecha_nacimiento" required><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- 2. Contacto y Ubicación -->
+        <fieldset>
+            <legend>Contacto y Residencia</legend>
+
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="web">Página Web Personal:</label><br>
+            <input type="url" id="web" name="sitio_web" placeholder="https://ejemplo.com"><br><br>
+
+            <label for="telefono">Teléfono:</label><br>
+            <input type="tel" id="telefono" name="telefono"><br><br>
+
+            <label for="residencia">Lugar de residencia:</label><br>
+            <input type="text" id="residencia" name="residencia" required><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- 3. Preferencias e Imagen -->
+        <fieldset>
+            <legend>Preferencias y Perfil</legend>
+
+            <p>Preferencias de publicidad:</p>
+            <input type="radio" id="semanal" name="publicidad" value="semanal" checked>
+            <label for="semanal">Un e-mail semanal</label><br>
+            
+            <input type="radio" id="mensual" name="publicidad" value="mensual">
+            <label for="mensual">Un e-mail mensual</label><br>
+            
+            <input type="radio" id="ninguno" name="publicidad" value="ninguno">
+            <label for="ninguno">Ninguno</label><br><br>
+
+            <label for="perfil">Imagen de perfil (solo JPG o PNG):</label><br>
+            <!-- accept limita los archivos visualmente en el navegador -->
+            <input type="file" id="perfil" name="foto_perfil" accept=".jpg, .jpeg, .png"><br><br>
+
+            <label for="color">Color favorito:</label><br>
+            <input type="color" id="color" name="color_favorito" value="#ff0000"><br><br>
+
+            <label for="experiencia">Experiencia en software libre (0 a 100):</label><br>
+            <input type="range" id="experiencia" name="experiencia_software" min="0" max="100" value="50"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- 4. Seguridad y Términos -->
+        <fieldset>
+            <legend>Seguridad y Envío</legend>
+
+            <label for="clave">Contraseña (entre 10 y 60 caracteres):</label><br>
+            <!-- minlength y maxlength hacen la validación exacta que pidió el profesor -->
+            <input type="password" id="clave" name="contraseña" minlength="10" maxlength="60" required><br><br>
+
+            <input type="checkbox" id="terminos" name="aceptar_terminos" required>
+            <label for="terminos">Acepto los términos y condiciones</label><br><br>
+
+            <!-- Botones de acción -->
+            <button type="submit">Enviar Registro</button>
+            <button type="reset">Resetear Formulario</button>
+        </fieldset>
+
+    </form>
+
+</body>
+</html>

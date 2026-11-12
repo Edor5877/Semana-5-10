@@ -1,0 +1,151 @@
+/* Reset general de márgenes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5; /* Fondo gris claro general para resaltar el CV */
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* 1. Barra superior amarilla (aprox. 3cm de alto) */
+.barra-superior {
+  background-color: #f1c40f; /* Amarillo vibrante */
+  height: 115px; /* Altura aproximada a 3cm en pantallas estándar */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alinea el contenido a la derecha */
+  padding: 0 40px;
+}
+
+.nombre-alumno {
+  color: #000000; /* Letra negra */
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* Contenedor principal para estructurar las dos columnas */
+.columnas-container {
+  display: grid;
+  grid-template-columns: 65% 35%; /* La izquierda ocupa más de la mitad */
+  min-height: calc(100vh - 115px); /* Ocupa el resto de la pantalla */
+}
+
+/* 2. Columna izquierda (Ancha y fondo blanco) */
+.columna-izquierda {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 40px;
+}
+
+/* Títulos principales en color negro */
+.titulo-seccion {
+  color: #000000; /* Letra negra */
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 5px;
+}
+
+/* Evita margen extra en el primer título */
+.columna-izquierda .titulo-seccion:first-child {
+  margin-top: 0;
+}
+
+/* Subtítulos de la experiencia */
+.trabajo h3 {
+  color: #2980b9; /* Color azul sutil para destacar puestos */
+  font-size: 1.3rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.columna-izquierda p {
+  text-align: justify;
+  margin-bottom: 20px;
+  color: #444444;
+}
+
+/* 3. Columna derecha (Angosta y fondo verde oliva) */
+.columna-derecha {
+  background-color: #556b2f; /* Verde oliva (DarkOliveGreen) */
+  color: #ffffff; /* Texto blanco para que resalte en el fondo oscuro */
+  padding: 40px 25px;
+}
+
+/* Foto de perfil */
+.gravatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%; /* Foto redonda */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 30px auto;
+  border: 4px solid #ffffff;
+}
+
+/* Títulos de la columna derecha */
+.columna-derecha h3 {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+}
+
+.columna-derecha h4 {
+  font-size: 1rem;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+}
+
+/* Listas de contacto */
+.contacto-list {
+  list-style: none;
+}
+
+.contacto-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.contacto-list a {
+  color: #f1c40f; /* Enlaces amarillos para que combinen con la barra superior */
+  text-decoration: none;
+}
+
+.contacto-list a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos de iconos en fondo verde */
+.fa-circle {
+  color: rgba(255, 255, 255, 0.2); /* Círculos semitransparentes */
+}
+
+/* Listas de Habilidades y Barras de progreso */
+.skills-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.skills-list li {
+  font-size: 0.95rem;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+progress {
+  width: 100%;
+  height: 10px;
+  accent-color: #f1c40f; /* El progreso de la barra se verá amarillo */
+}
