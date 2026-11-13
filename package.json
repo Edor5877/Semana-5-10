@@ -1,0 +1,27 @@
+{
+  "name": "semana-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edor5877/Semana-5-10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Edor5877/Semana-5-10/issues"
+  },
+  "homepage": "https://github.com/Edor5877/Semana-5-10#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "canvas-confetti": "^1.9.4",
+    "font-awesome": "^4.7.0",
+    "sweetalert2": "^11.26.25"
+  }
+}
