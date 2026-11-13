@@ -3,16 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Juan Pérez CV</title>
+  <title>Juan Ganin CV</title>
   <meta name="description" content="este es mi cv">
-  <!-- Iconos de FontAwesome para tus datos de contacto -->
-  <link rel="stylesheet" href="https://cloudflare.com">
+  
+  <!-- Paquetes importados localmente desde NPM (sin CDN) -->
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+  <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+  
+  <!-- Tus estilos propios -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- 1. Barra superior amarilla con el nombre a la derecha -->
-  <header class="barra-superior">
+  <!-- 1. Barra superior amarilla con animación de entrada -->
+  <header class="barra-superior animate__animated animate__fadeInDown">
     <h1 class="nombre-alumno">Juan Ganin</h1>
   </header>
 
@@ -20,18 +25,23 @@
   <div class="columnas-container">
     
     <!-- 2. Columna izquierda: Ancha, fondo blanco, experiencia -->
-    <main class="columna-izquierda">
+    <main class="columna-izquierda animate__animated animate__fadeIn">
       <h2 class="titulo-seccion">Hola</h2>
       <p>
-      Soy juan Ganin, estudiante de la Tecnicatura en Software Libre Me apaciona la informática y deseo aprener cada dia un poco mas.
+        Soy Juan Ganin, estudiante de la Tecnicatura en Software Libre. Me apasiona la informática y deseo aprender cada día un poco más.
       </p>
+
+      <!-- Botón interactivo que usa SweetAlert2 + Canvas Confetti -->
+      <button id="btn-saludar" style="margin: 15px 0; padding: 10px 18px; background-color: #4b5320; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+        <i class="fa fa-paper-plane"></i> ¡Contactar / Saludar!
+      </button>
 
       <h2 class="titulo-seccion">Experiencia</h2>
 
       <section class="trabajo">
         <h3>Primer Trabajo</h3>
         <p>
-          Me desmpeñe como empleado repositor en un supermercado de mi localidad durante 2 años
+          Me desempeñé como empleado repositor en un supermercado de mi localidad durante 2 años.
         </p>
       </section>
 
@@ -45,14 +55,14 @@
       <section class="trabajo">
         <h3>Tercer Trabajo</h3>
         <p>
-          Docente en la EETP 453 hace mas de 10 años, especificamente secretario. 
+          Docente en la EETP 453 hace más de 10 años, específicamente secretario.
+        </p>
       </section>
     </main>
 
     <!-- 3. Columna derecha: Angosta, fondo verde oliva, datos y habilidades -->
-    <aside class="columna-derecha">
-       <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" class="gravatar" alt="Logo Linux Tux">
-      
+    <aside class="columna-derecha animate__animated animate__fadeInRight">
+      <img src="Tux.svg.webp" class="gravatar animate__animated animate__bounceIn" alt="Logo Linux Tux">
       <ul class="contacto-list">
         <li>
           <span class="fa-stack">
@@ -80,7 +90,7 @@
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
           </span>
-          +954 (3491) 431173
+          +54 (3491) 431173
         </li>
         <li>
           <span class="fa-stack">
@@ -120,6 +130,27 @@
     </aside>
 
   </div>
+
+  <!-- Scripts importados desde NPM -->
+  <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <script src="node_modules/canvas-confetti/dist/confetti.browser.js"></script>
+  <script>
+    document.getElementById('btn-saludar').addEventListener('click', function () {
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+
+      Swal.fire({
+        title: '¡Gracias por visitar mi CV!',
+        text: 'Puedes escribirme a juand_82@live.com o llamarme al (3491) 431173.',
+        icon: 'success',
+        confirmButtonText: '¡Genial!',
+        confirmButtonColor: '#4b5320'
+      });
+    });
+  </script>
 
 </body>
 </html>
